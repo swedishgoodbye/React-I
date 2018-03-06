@@ -7,7 +7,7 @@ class TheList extends Component {
     constructor() {
         super();
         this.state = {
-            doList: [],
+            doList: ['Go Home', 'Take Five'],
             newDo: '',
             selected: null
         };
@@ -33,13 +33,14 @@ class TheList extends Component {
 
     deleteDo = (index) => {
         this.setState({
-            selected: index
+            selected: index,
         });
-        index.splice(index, 1);
+       
     }
 
     render() {
         //  const borderStyle = { border: '1px black solid'};
+        
         return (
             <div>
                 {this.state.doList.map((item, i) => <DoneList key={i} index={i} done={item} action={this.deleteDo} />)}
