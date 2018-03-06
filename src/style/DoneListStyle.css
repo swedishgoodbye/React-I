@@ -1,0 +1,9 @@
+.doneItem{
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    margin: 5px 0;
+    padding: 10px 0;
+    border: 5px solid;
+    border-color: rgb(179, 120, 247);
+    font-size: 120%;
+}

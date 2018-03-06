@@ -1,0 +1,13 @@
+
+
+.ToDo__Head{
+    text-align: center;
+    font-size: 400%;
+    color: rgb(255, 11, 255);
+    font-family: 'Overpass Mono', monospace; 
+}
+
+.TheList__Div{
+    display: flex;
+    justify-content: center;
+}
