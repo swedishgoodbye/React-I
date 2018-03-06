@@ -16,13 +16,6 @@ class DoneList extends Component {
 
   handleDelete = (index) => {
       this.props.action(this.props.index);
-
-      
-      
-      
-      
-      
-      
   }
 
   render() {
