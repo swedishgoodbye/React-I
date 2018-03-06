@@ -7,7 +7,7 @@ class TheList extends Component {
     constructor() {
         super();
         this.state = {
-            doList: ['Go Home', 'Take Five'],
+            doList: [],
             newDo: '',
             selected: null
         };
@@ -32,10 +32,11 @@ class TheList extends Component {
     };
 
     deleteDo = (index) => {
+        const doList = this.state.doList;
         this.setState({
             selected: index,
         });
-       
+        doList.splice(index, 1)
     }
 
     render() {
