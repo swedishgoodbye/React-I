@@ -1,9 +1,18 @@
+.doX{
+    float: right;
+    padding: 5px 5px;
+    border: 1px darkred solid;
+    background: white;
+    color:red;
+}
+
 .doneItem{
     background-color: rgb(255, 255, 255);
     width: 95%;
     margin: 5px 0;
     padding: 10px 0;
     border: 5px solid;
-    border-color: rgb(179, 120, 247);
+    border-color: #b378f7;
     font-size: 120%;
+    text-align: center;
 }

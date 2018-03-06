@@ -8,7 +8,8 @@ class TheList extends Component {
         super();
         this.state = {
             doList: [],
-            newDo: ''
+            newDo: '',
+            selected: null
         };
     }
 
@@ -30,11 +31,18 @@ class TheList extends Component {
         this.setState({ newDo: event.target.value });
     };
 
+    deleteDo = (index) => {
+        this.setState({
+            selected: index
+        });
+        index.splice(index, 1);
+    }
+
     render() {
         //  const borderStyle = { border: '1px black solid'};
         return (
             <div>
-                {this.state.doList.map(item => <DoneList done={item} />)}
+                {this.state.doList.map((item, i) => <DoneList key={i} index={i} done={item} action={this.deleteDo} />)}
 {/* <div>{item}</div>)} */}
                 <form onSubmit={this.addDo}>
 
