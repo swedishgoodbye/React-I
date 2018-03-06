@@ -6,4 +6,11 @@
     border: 5px solid;
     border-color: rgb(179, 120, 247);
     font-size: 120%;
+    text-align: center;
+}
+
+.doX{
+    float: right;
+    color: red;
+    padding: 3px 10px;
 }

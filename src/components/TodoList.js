@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './style/DoneListStyle.css';
+import '../style/DoneListStyle.css';
 
-class DoneList extends Component {
+class TodoList extends Component {
     constructor(){
     super();
     this.state = {
@@ -17,10 +17,13 @@ class DoneList extends Component {
   render() {
      
       const styles = this.state.clicked ? { textDecoration: 'line-through', color: 'white', background: '#809DFD'} : {textDecoration: 'none' };
+    //   const del = this.state.clicked 
       return (
           <div className='doneItem' style={styles} onClick={this.handleClick}>{this.props.done}</div>
+        //   <button className="doX" onClick={this.props.deleteDo.bind(this, done)}>X</button>
       )
+      
   }
 }
 
-export default DoneList;
+export default TodoList;

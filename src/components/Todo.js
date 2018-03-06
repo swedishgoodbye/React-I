@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import DoneList from './DoneList.js'
+import TodoList from './TodoList.js'
 import './style/List.css'
 
 
-class TheList extends Component {
+class Todo extends Component {
     constructor() {
         super();
         this.state = {
@@ -22,6 +22,12 @@ class TheList extends Component {
         });
     };
 
+    deleteDo = (item) => {
+        this.setState({
+            newDo: this.newDo.remove
+        })
+    };
+
     // styleDo = () => {
     //     newDo.element.style = "border: 1px solid black";
     // }
@@ -34,16 +40,18 @@ class TheList extends Component {
         //  const borderStyle = { border: '1px black solid'};
         return (
             <div>
-                {this.state.doList.map(item => <DoneList done={item} />)}
+                {this.state.doList.map(item => <TodoList done={item} />)}
 {/* <div>{item}</div>)} */}
                 <form onSubmit={this.addDo}>
 
                     <input className="doTextBox" type="text" onChange={this.handleNewDoInput} placeholder="-New Do Here-" value={this.state.newDo} />
+                    
                 </form>
+    
             </div>
 
         );
     }
 }
 
-export default TheList;
+export default Todo;

@@ -1,5 +1,5 @@
 import React from 'react';
-import TheList from './List.js';
+import Todo from './components/Todo.js';
 import './style/AppStyle.css'
 
 
@@ -8,7 +8,7 @@ const App = () => (
     <h2 className="ToDo__Head">Todo App</h2>
 
     <div className="TheList__Div">
-    <TheList  />
+    <Todo  />
     </div>
   </div>
 );
