@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TodoList from './TodoList.js'
-import './style/List.css'
+import '../style/List.css'
 
 
 class Todo extends Component {
@@ -8,7 +8,8 @@ class Todo extends Component {
         super();
         this.state = {
             doList: [],
-            newDo: ''
+            newDo: '',
+            // selected: null
         };
     }
 
@@ -36,11 +37,18 @@ class Todo extends Component {
         this.setState({ newDo: event.target.value });
     };
 
+    // childFunc = (event) => {
+    //     this.setState({
+    //         selected: index
+    //    });
+    // }
+
     render() {
         //  const borderStyle = { border: '1px black solid'};
         return (
             <div>
-                {this.state.doList.map(item => <TodoList done={item} />)}
+                {this.state.doList.map((item, i) => <TodoList  done={item} />)}
+                                                         {/* key={i} index={i} */}
 {/* <div>{item}</div>)} */}
                 <form onSubmit={this.addDo}>
 
